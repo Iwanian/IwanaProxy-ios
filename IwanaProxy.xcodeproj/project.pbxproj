@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD02BA49E2F74110B65CA708 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262506693B045E19FDF6397 /* Theme.swift */; };
+		BE9A3C02C6044DDEA636A23C /* IwanaProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC494CB7B4744D14B9F1305E /* IwanaProxyApp.swift */; };
+		0423E3ED096045F6AD84F390 /* ProxyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1AE502BFA2447792460086 /* ProxyItem.swift */; };
+		BBEA5E37F1C64107A6BB0F98 /* SpeedTestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBDE7B8E2C4F66879234DB /* SpeedTestModels.swift */; };
+		734BF333AB52478897221E12 /* UiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86B7DF00B046C0857A8B82 /* UiState.swift */; };
+		ED1E06FFCD1949B2BA3904B0 /* BannerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5AD545DFF439B8AF8E306 /* BannerRepository.swift */; };
+		EABD1D549A844E39A6F75FB4 /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014F9D325F04D56AB7C5E15 /* DataStoreManager.swift */; };
+		08E94AD8F96D4AA9A9D88930 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA385205EA431EBDB9F393 /* LocalizationManager.swift */; };
+		66D2C7CB94394CCDB861E1B7 /* PingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A3861C35E42628CD0C938 /* PingService.swift */; };
+		BB3396B5D21742F49856594E /* ProxyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8802F50814464A04AE51D4F0 /* ProxyParser.swift */; };
+		8FD5AB985CBE4A67A6351610 /* ProxyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC559E5F674D108F44C8A9 /* ProxyRepository.swift */; };
+		C95391EB1A654570A3B16E6A /* ProxySpeedTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B89302E4F4EF684452FBA /* ProxySpeedTester.swift */; };
+		B2E83D57536A483780BB4B29 /* TelegramLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF132431DF074199B67FE746 /* TelegramLauncher.swift */; };
+		28636688B08F45C0B4455D5F /* ProxyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281282B0DAF45BA83A18CEA /* ProxyViewModel.swift */; };
+		4DF240565CD5414D937EAC15 /* AdBannerSlideshowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AD4ED3E7D740A5B99FB01E /* AdBannerSlideshowView.swift */; };
+		39EF1A81C4AD4803A7A2DBE7 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA07308187648899391147E /* LanguageSelectionView.swift */; };
+		51EB0E3B39D54E4E851CFBB4 /* ProxyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4312DAF3B340D19F0ABEEF /* ProxyCardView.swift */; };
+		74344A52C92445B398EEA0A0 /* ProxyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB045B13E54945A5BEEAE5A0 /* ProxyListView.swift */; };
+		57E158F34C5F40218D140F74 /* ProxySpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E0654B29ED4423A411E55D /* ProxySpeedTestView.swift */; };
+		9BD5EA17AB0443078C794157 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037F94D95EAE423A8F88C56A /* RootView.swift */; };
+		E8446D234B504E6A9BABBB70 /* SavedProxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7D21E52DB4FDCA7591EA8 /* SavedProxiesView.swift */; };
+		BD80D43951E24524A6925EA7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33A147A3444843A3FEF8CE /* SettingsView.swift */; };
+		8C3645A655024A4CB679B9B1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D1D7A6D9747C0A98E730C /* SplashView.swift */; };
+		E05111B2EEE7457780630BAD /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6023A7C0D44B482D80AE293C /* SupportView.swift */; };
+		7286457178664059A2DE4E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8435466692D8450EB748E8DA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2262506693B045E19FDF6397 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CC494CB7B4744D14B9F1305E /* IwanaProxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IwanaProxyApp.swift; sourceTree = "<group>"; };
+		6A1AE502BFA2447792460086 /* ProxyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyItem.swift; sourceTree = "<group>"; };
+		81CBDE7B8E2C4F66879234DB /* SpeedTestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestModels.swift; sourceTree = "<group>"; };
+		BC86B7DF00B046C0857A8B82 /* UiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiState.swift; sourceTree = "<group>"; };
+		4FC5AD545DFF439B8AF8E306 /* BannerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerRepository.swift; sourceTree = "<group>"; };
+		8014F9D325F04D56AB7C5E15 /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		58DA385205EA431EBDB9F393 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		4A0A3861C35E42628CD0C938 /* PingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingService.swift; sourceTree = "<group>"; };
+		8802F50814464A04AE51D4F0 /* ProxyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyParser.swift; sourceTree = "<group>"; };
+		D1CC559E5F674D108F44C8A9 /* ProxyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyRepository.swift; sourceTree = "<group>"; };
+		D92B89302E4F4EF684452FBA /* ProxySpeedTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxySpeedTester.swift; sourceTree = "<group>"; };
+		BF132431DF074199B67FE746 /* TelegramLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramLauncher.swift; sourceTree = "<group>"; };
+		E281282B0DAF45BA83A18CEA /* ProxyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyViewModel.swift; sourceTree = "<group>"; };
+		C8AD4ED3E7D740A5B99FB01E /* AdBannerSlideshowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerSlideshowView.swift; sourceTree = "<group>"; };
+		4BA07308187648899391147E /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		1F4312DAF3B340D19F0ABEEF /* ProxyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyCardView.swift; sourceTree = "<group>"; };
+		DB045B13E54945A5BEEAE5A0 /* ProxyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyListView.swift; sourceTree = "<group>"; };
+		77E0654B29ED4423A411E55D /* ProxySpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxySpeedTestView.swift; sourceTree = "<group>"; };
+		037F94D95EAE423A8F88C56A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		BBB7D21E52DB4FDCA7591EA8 /* SavedProxiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedProxiesView.swift; sourceTree = "<group>"; };
+		3A33A147A3444843A3FEF8CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3E2D1D7A6D9747C0A98E730C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		6023A7C0D44B482D80AE293C /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
+		8435466692D8450EB748E8DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B58F92CFB5684CCE91C8F2A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E2CE7E5CC54EBEB145C678 /* IwanaProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IwanaProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		943B5DD32ACF4CF59370DE46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F641834644244F383C5038C = {
+			isa = PBXGroup;
+			children = (
+				E1205677491D424DB33686B3 /* IwanaProxy */,
+				C3BABE7979904D8C9F0AF82F /* DesignSystem */,
+				247AEBE3E0D94F63987D981E /* Models */,
+				C40844DF811B4B01908296A7 /* Services */,
+				B8928CB63DF04EB7BC6596FF /* ViewModels */,
+				30756B86D7F04959AC71E1B0 /* Views */,
+				8435466692D8450EB748E8DA /* Assets.xcassets */,
+				B58F92CFB5684CCE91C8F2A8 /* Info.plist */,
+				360F0F6D43C64B41941E8FFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		360F0F6D43C64B41941E8FFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6E2CE7E5CC54EBEB145C678 /* IwanaProxy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3BABE7979904D8C9F0AF82F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2262506693B045E19FDF6397 /* Theme.swift */,
+			);
+			name = DesignSystem;
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		E1205677491D424DB33686B3 /* IwanaProxy */ = {
+			isa = PBXGroup;
+			children = (
+				CC494CB7B4744D14B9F1305E /* IwanaProxyApp.swift */,
+			);
+			name = IwanaProxy;
+			sourceTree = "<group>";
+		};
+		247AEBE3E0D94F63987D981E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A1AE502BFA2447792460086 /* ProxyItem.swift */,
+				81CBDE7B8E2C4F66879234DB /* SpeedTestModels.swift */,
+				BC86B7DF00B046C0857A8B82 /* UiState.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C40844DF811B4B01908296A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4FC5AD545DFF439B8AF8E306 /* BannerRepository.swift */,
+				8014F9D325F04D56AB7C5E15 /* DataStoreManager.swift */,
+				58DA385205EA431EBDB9F393 /* LocalizationManager.swift */,
+				4A0A3861C35E42628CD0C938 /* PingService.swift */,
+				8802F50814464A04AE51D4F0 /* ProxyParser.swift */,
+				D1CC559E5F674D108F44C8A9 /* ProxyRepository.swift */,
+				D92B89302E4F4EF684452FBA /* ProxySpeedTester.swift */,
+				BF132431DF074199B67FE746 /* TelegramLauncher.swift */,
+			);
+			name = Services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B8928CB63DF04EB7BC6596FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E281282B0DAF45BA83A18CEA /* ProxyViewModel.swift */,
+			);
+			name = ViewModels;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30756B86D7F04959AC71E1B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8AD4ED3E7D740A5B99FB01E /* AdBannerSlideshowView.swift */,
+				4BA07308187648899391147E /* LanguageSelectionView.swift */,
+				1F4312DAF3B340D19F0ABEEF /* ProxyCardView.swift */,
+				DB045B13E54945A5BEEAE5A0 /* ProxyListView.swift */,
+				77E0654B29ED4423A411E55D /* ProxySpeedTestView.swift */,
+				037F94D95EAE423A8F88C56A /* RootView.swift */,
+				BBB7D21E52DB4FDCA7591EA8 /* SavedProxiesView.swift */,
+				3A33A147A3444843A3FEF8CE /* SettingsView.swift */,
+				3E2D1D7A6D9747C0A98E730C /* SplashView.swift */,
+				6023A7C0D44B482D80AE293C /* SupportView.swift */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A43C1C51A6D34CEFBF04E5CA /* IwanaProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B359F25AEA1845E6B5E708EF /* Build configuration list for PBXNativeTarget "IwanaProxy" */;
+			buildPhases = (
+				1CE33DF210CB48B0BEDE6A18 /* Sources */,
+				943B5DD32ACF4CF59370DE46 /* Frameworks */,
+				4374EC47DEAE4B0B9EC0D7B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IwanaProxy;
+			productName = IwanaProxy;
+			productReference = B6E2CE7E5CC54EBEB145C678 /* IwanaProxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D470E6289191415E82AF264E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					A43C1C51A6D34CEFBF04E5CA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 0199D97F7074484381043613 /* Build configuration list for PBXProject "IwanaProxy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = fa;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				fa,
+				en,
+				ru,
+				Base,
+			);
+			mainGroup = 2F641834644244F383C5038C;
+			productRefGroup = 360F0F6D43C64B41941E8FFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A43C1C51A6D34CEFBF04E5CA /* IwanaProxy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4374EC47DEAE4B0B9EC0D7B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7286457178664059A2DE4E74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CE33DF210CB48B0BEDE6A18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD02BA49E2F74110B65CA708 /* Theme.swift in Sources */,
+				BE9A3C02C6044DDEA636A23C /* IwanaProxyApp.swift in Sources */,
+				0423E3ED096045F6AD84F390 /* ProxyItem.swift in Sources */,
+				BBEA5E37F1C64107A6BB0F98 /* SpeedTestModels.swift in Sources */,
+				734BF333AB52478897221E12 /* UiState.swift in Sources */,
+				ED1E06FFCD1949B2BA3904B0 /* BannerRepository.swift in Sources */,
+				EABD1D549A844E39A6F75FB4 /* DataStoreManager.swift in Sources */,
+				08E94AD8F96D4AA9A9D88930 /* LocalizationManager.swift in Sources */,
+				66D2C7CB94394CCDB861E1B7 /* PingService.swift in Sources */,
+				BB3396B5D21742F49856594E /* ProxyParser.swift in Sources */,
+				8FD5AB985CBE4A67A6351610 /* ProxyRepository.swift in Sources */,
+				C95391EB1A654570A3B16E6A /* ProxySpeedTester.swift in Sources */,
+				B2E83D57536A483780BB4B29 /* TelegramLauncher.swift in Sources */,
+				28636688B08F45C0B4455D5F /* ProxyViewModel.swift in Sources */,
+				4DF240565CD5414D937EAC15 /* AdBannerSlideshowView.swift in Sources */,
+				39EF1A81C4AD4803A7A2DBE7 /* LanguageSelectionView.swift in Sources */,
+				51EB0E3B39D54E4E851CFBB4 /* ProxyCardView.swift in Sources */,
+				74344A52C92445B398EEA0A0 /* ProxyListView.swift in Sources */,
+				57E158F34C5F40218D140F74 /* ProxySpeedTestView.swift in Sources */,
+				9BD5EA17AB0443078C794157 /* RootView.swift in Sources */,
+				E8446D234B504E6A9BABBB70 /* SavedProxiesView.swift in Sources */,
+				BD80D43951E24524A6925EA7 /* SettingsView.swift in Sources */,
+				8C3645A655024A4CB679B9B1 /* SplashView.swift in Sources */,
+				E05111B2EEE7457780630BAD /* SupportView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9CC71CF370744AAA8AFBB7F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FF01FB5EA2F49A29EC88FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3873C230ED1446B1925B309D /* Debug */ = {
+			isa = XCBuildConfiguration;
+
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IwanaProxy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwanian.iwanaproxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6FCDAB796BE4AD98BE00AA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IwanaProxy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwanian.iwanaproxy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0199D97F7074484381043613 /* Build configuration list for PBXProject "IwanaProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC71CF370744AAA8AFBB7F9 /* Debug */,
+				1FF01FB5EA2F49A29EC88FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B359F25AEA1845E6B5E708EF /* Build configuration list for PBXNativeTarget "IwanaProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3873C230ED1446B1925B309D /* Debug */,
+				A6FCDAB796BE4AD98BE00AA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = D470E6289191415E82AF264E /* Project object */;
+}

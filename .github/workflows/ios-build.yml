@@ -1,0 +1,102 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build for Simulator (smoke test, no signing needed)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
+
+      - name: Show available schemes
+        run: xcodebuild -project IwanaProxy.xcodeproj -list
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild -project IwanaProxy.xcodeproj \
+            -scheme IwanaProxy \
+            -destination "generic/platform=iOS Simulator" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+  # This second job only runs if you've added your own Apple Developer
+  # signing secrets to the repo (Settings -> Secrets and variables ->
+  # Actions). It is disabled by default because Anthropic/Claude cannot
+  # supply your certificate, provisioning profile, or team ID for you.
+  #
+  # To enable it: add these repo secrets, then remove the `if: false` line.
+  #   BUILD_CERTIFICATE_BASE64      (your .p12 export, base64-encoded)
+  #   P12_PASSWORD                  (password for the .p12)
+  #   BUILD_PROVISION_PROFILE_BASE64 (your .mobileprovision, base64-encoded)
+  #   KEYCHAIN_PASSWORD             (any throwaway password, used only in CI)
+  #   DEVELOPMENT_TEAM              (your 10-character Apple Team ID)
+  build-signed-ipa:
+    name: Build & export signed IPA (requires your Apple Developer secrets)
+    if: false
+    runs-on: macos-14
+    needs: build-and-test
+    env:
+      DEVELOPMENT_TEAM: ${{ secrets.DEVELOPMENT_TEAM }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install signing certificate and provisioning profile
+        run: |
+          CERT_PATH=$RUNNER_TEMP/build_certificate.p12
+          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+
+          echo -n "${{ secrets.BUILD_CERTIFICATE_BASE64 }}" | base64 --decode -o $CERT_PATH
+          echo -n "${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}" | base64 --decode -o $PP_PATH
+
+          security create-keychain -p "${{ secrets.KEYCHAIN_PASSWORD }}" $KEYCHAIN_PATH
+          security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
+          security unlock-keychain -p "${{ secrets.KEYCHAIN_PASSWORD }}" $KEYCHAIN_PATH
+          security import $CERT_PATH -P "${{ secrets.P12_PASSWORD }}" -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          security list-keychain -d user -s $KEYCHAIN_PATH
+
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+
+      - name: Archive
+        run: |
+          xcodebuild -project IwanaProxy.xcodeproj \
+            -scheme IwanaProxy \
+            -configuration Release \
+            -archivePath $RUNNER_TEMP/IwanaProxy.xcarchive \
+            DEVELOPMENT_TEAM=$DEVELOPMENT_TEAM \
+            archive
+
+      - name: Export IPA
+        run: |
+          cat > $RUNNER_TEMP/ExportOptions.plist << EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>ad-hoc</string>
+            <key>teamID</key>
+            <string>$DEVELOPMENT_TEAM</string>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive \
+            -archivePath $RUNNER_TEMP/IwanaProxy.xcarchive \
+            -exportOptionsPlist $RUNNER_TEMP/ExportOptions.plist \
+            -exportPath $RUNNER_TEMP/export
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: IwanaProxy-ipa
+          path: ${{ runner.temp }}/export/*.ipa
