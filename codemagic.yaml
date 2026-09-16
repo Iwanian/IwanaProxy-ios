@@ -4,9 +4,6 @@ workflows:
     instance_type: mac_mini_m2
     environment:
       xcode: latest
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.iwanian.iwanaproxy
     scripts:
       - name: Build iOS app
         script: |
