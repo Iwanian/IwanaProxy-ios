@@ -7,13 +7,14 @@ workflows:
     scripts:
       - name: Build iOS app
         script: |
-          xcodebuild \
-            -project "IwanaProxy.xcodeproj" \
-            -scheme "IwanaProxy" \
-            -configuration Release \
-            -sdk iphoneos \
-            -archivePath build/IwanaProxy.xcarchive \
-            archive
+         xcodebuild \
+          -project "IwanaProxy.xcodeproj" \
+          -scheme "IwanaProxy" \
+          -configuration Release \
+          -sdk iphonesimulator \
+          -destination 'generic/platform=iOS Simulator' \
+          CODE_SIGNING_ALLOWED=NO \
+          build
     artifacts:
       - build/IwanaProxy.xcarchive/**/*.ipa
       - build/IwanaProxy.xcarchive/**/*.app
