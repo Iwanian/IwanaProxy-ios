@@ -113,6 +113,7 @@
 				CC494CB7B4744D14B9F1305E /* IwanaProxyApp.swift */,
 			);
 			name = IwanaProxy;
+			path = IwanaProxy;
 			sourceTree = "<group>";
 		};
 		247AEBE3E0D94F63987D981E /* Models */ = {
